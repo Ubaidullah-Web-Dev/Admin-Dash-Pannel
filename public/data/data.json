@@ -1,0 +1,612 @@
+{
+    "sideNav": {
+        "brand": "</>Ubaid",
+        "plan": "Free Plan",
+        "daysLeft": 4,
+        "upgradeUrl": "/upgrade",
+        "main": [
+            {
+                "name": "Dashboard",
+                "url": "/",
+                "icon": "FiHome"
+            },
+            {
+                "name": "Orders",
+                "url": "/orders",
+                "icon": "FiShoppingBag"
+            },
+            {
+                "name": "Products",
+                "url": "/products",
+                "icon": "FiPackage"
+            },
+            {
+                "name": "Customers",
+                "url": "/customers",
+                "icon": "FiUsers"
+            },
+            {
+                "name": "Finance",
+                "url": "/finance",
+                "icon": "FiDollarSign"
+            },
+            {
+                "name": "Settings",
+                "url": "/settings",
+                "icon": "FiSettings"
+            }
+        ],
+        "other": [
+            {
+                "name": "Personalize",
+                "url": "/personalize",
+                "icon": "FiEdit"
+            }
+        ]
+    },
+    "dashboard": {
+        "welcome": "Welcome,",
+        "user": "</>Ubaid",
+        "totalEarned": 2501.00,
+        "stats": [
+            {
+                "label": "Orders",
+                "value": "250100",
+                "icon": "FiShoppingBag",
+                "color": "green"
+            },
+            {
+                "label": "Customers",
+                "value": "12,501",
+                "icon": "FiUsers",
+                "color": "blue"
+            },
+            {
+                "label": "Products",
+                "value": "245.15k",
+                "icon": "FiPackage",
+                "color": "purple"
+            },
+            {
+                "label": "Revenue",
+                "value": "$154.12k",
+                "icon": "FiDollarSign",
+                "color": "yellow"
+            }
+        ],
+        "chartData": [
+            {
+                "name": "Jan",
+                "pv": 2400
+            },
+            {
+                "name": "Feb",
+                "pv": 1398
+            },
+            {
+                "name": "Mar",
+                "pv": 9800
+            },
+            {
+                "name": "Apr",
+                "pv": 3908
+            },
+            {
+                "name": "May",
+                "pv": 4800
+            },
+            {
+                "name": "Jun",
+                "pv": 3800
+            }
+        ],
+        "topProducts": [
+            {
+                "name": "Fashion SiaT co.",
+                "sales": 3201,
+                "growth": 40
+            },
+            {
+                "name": "owirg 1 to d atBertrien",
+                "sales": 1256.65,
+                "growth": 10
+            },
+            {
+                "name": "ewh Fashia",
+                "sales": 9895.15,
+                "growth": 25
+            }
+        ]
+    },
+    "orders": {
+        "dateRange": "6/2025 - 25/06/2025",
+        "summary": [
+            {
+                "label": "All Orders",
+                "count": 648,
+                "amount": 1580
+            },
+            {
+                "label": "Processed",
+                "count": 234,
+                "amount": 852
+            },
+            {
+                "label": "Delivered",
+                "count": 852,
+                "amount": 1152
+            },
+            {
+                "label": "Returned",
+                "count": 63,
+                "amount": 1480
+            }
+        ],
+        "table": [
+            {
+                "id": "#ODR115753",
+                "customer": "Andrew",
+                "country": "USA",
+                "amount": 65,
+                "status": "Shipping",
+                "date": "8 Feb 2025",
+                "time": "11:13:00 PM",
+                "discount": "7.00, 5%"
+            },
+            {
+                "id": "#ODR115743",
+                "customer": "Caroline Mturphy",
+                "country": "Spain",
+                "amount": 5,
+                "status": "Shipping",
+                "date": "6 Mar 2025",
+                "time": "1:13:00 AM",
+                "discount": "10.00, 8%"
+            },
+            {
+                "id": "#ODR115560",
+                "customer": "Roy Smith",
+                "country": "UK",
+                "amount": 65,
+                "status": "New Order",
+                "date": "7 Mar 2025",
+                "time": "10:00:00 PM",
+                "discount": "10.00, 8%"
+            },
+            {
+                "id": "#ODR115463",
+                "customer": "GW",
+                "country": "GER",
+                "amount": 65,
+                "status": "Delivered",
+                "date": "2 Mar 2025",
+                "time": "12:13:00 PM",
+                "discount": "12.00, 10%"
+            },
+            {
+                "id": "#ODR115352",
+                "customer": "Bella Leach",
+                "country": "USA",
+                "amount": 65,
+                "status": "Shipping",
+                "date": "2 Mar 2025",
+                "time": "04:13:00 PM",
+                "discount": "8.00, 0%"
+            },
+            {
+                "id": "#ODR115324",
+                "customer": "Audrey Hardin",
+                "country": "Austria",
+                "amount": 65,
+                "status": "Ready to Ship",
+                "date": "4 Mar 2025",
+                "time": "10:13:00 AM",
+                "discount": "11.00, 9%"
+            }
+        ]
+    },
+    "products": {
+        "stats": [
+            {
+                "label": "Total Products",
+                "value": "245.15k",
+                "icon": "FiPackage",
+                "color": "green"
+            },
+            {
+                "label": "In Stock",
+                "value": "154.12k",
+                "icon": "FiCheckCircle",
+                "color": "blue"
+            },
+            {
+                "label": "Low Stock",
+                "value": "101.05k",
+                "icon": "FiAlertTriangle",
+                "color": "yellow"
+            },
+            {
+                "label": "Out of Stock",
+                "value": "95.34k",
+                "icon": "FiXCircle",
+                "color": "red"
+            }
+        ],
+        "list": [
+            {
+                "id": 841,
+                "name": "Fashion SiaT co.",
+                "price": 85,
+                "stock": 50,
+                "sales": 1453,
+                "revenue": 3201
+            },
+            {
+                "id": 1453,
+                "name": "owirg 1 to d atBertrien",
+                "price": 55,
+                "stock": 55,
+                "sales": 863,
+                "revenue": 1256.65
+            },
+            {
+                "id": 101,
+                "name": "ewh Fashia",
+                "price": 55,
+                "stock": 848,
+                "sales": 1152,
+                "revenue": 9895.15
+            }
+        ]
+    },
+    "customers": {
+        "stats": [
+            {
+                "label": "Total Customers",
+                "value": "12,501",
+                "icon": "FiUsers",
+                "color": "blue"
+            },
+            {
+                "label": "New This Month",
+                "value": "1,248",
+                "icon": "FiUserPlus",
+                "color": "green"
+            },
+            {
+                "label": "Active",
+                "value": "10,842",
+                "icon": "FiActivity",
+                "color": "purple"
+            },
+            {
+                "label": "Inactive",
+                "value": "1,659",
+                "icon": "FiUserX",
+                "color": "yellow"
+            }
+        ],
+        "list": [
+            {
+                "id": 1,
+                "name": "Caroline Murphy",
+                "country": "Spain",
+                "orders": 12,
+                "spent": 1250,
+                "status": "Active"
+            },
+            {
+                "id": 2,
+                "name": "Roy Smith",
+                "country": "UK",
+                "orders": 8,
+                "spent": 850,
+                "status": "Active"
+            },
+            {
+                "id": 3,
+                "name": "Bella Leach",
+                "country": "USA",
+                "orders": 15,
+                "spent": 2100,
+                "status": "Active"
+            },
+            {
+                "id": 4,
+                "name": "Audrey Hardin",
+                "country": "Austria",
+                "orders": 6,
+                "spent": 650,
+                "status": "Inactive"
+            }
+        ]
+    },
+    "finance": {
+        "summary": [
+            {
+                "label": "Total Revenue",
+                "value": "$154.12k",
+                "icon": "FiDollarSign",
+                "color": "green"
+            },
+            {
+                "label": "Total Profit",
+                "value": "$45.30k",
+                "icon": "FiTrendingUp",
+                "color": "blue"
+            },
+            {
+                "label": "Total Expenses",
+                "value": "$108.82k",
+                "icon": "FiTrendingDown",
+                "color": "red"
+            },
+            {
+                "label": "Net Margin",
+                "value": "29.4%",
+                "icon": "FiPercent",
+                "color": "purple"
+            }
+        ],
+        "chartData": [
+            {
+                "month": "Jan",
+                "revenue": 65000,
+                "profit": 57000
+            },
+            {
+                "month": "Feb",
+                "revenue": 42000,
+                "profit": 18000
+            },
+            {
+                "month": "Mar",
+                "revenue": 38000,
+                "profit": 15000
+            },
+            {
+                "month": "Apr",
+                "revenue": 46000,
+                "profit": 19000
+            },
+            {
+                "month": "May",
+                "revenue": 52000,
+                "profit": 22000
+            },
+            {
+                "month": "Jun",
+                "revenue": 48000,
+                "profit": 20000
+            }
+        ]
+    },
+    "settings": {
+        "sections": [
+            {
+                "title": "General",
+                "fields": [
+                    {
+                        "label": "Store Name",
+                        "type": "text",
+                        "value": "Ubaid"
+                    },
+                    {
+                        "label": "Store Email",
+                        "type": "email",
+                        "value": "admin@Ubaid.com"
+                    },
+                    {
+                        "label": "Store Currency",
+                        "type": "select",
+                        "value": "USD"
+                    }
+                ]
+            },
+            {
+                "title": "Payment",
+                "fields": [
+                    {
+                        "label": "Enable Stripe",
+                        "type": "checkbox",
+                        "value": true
+                    },
+                    {
+                        "label": "Enable PayPal",
+                        "type": "checkbox",
+                        "value": true
+                    }
+                ]
+            }
+        ]
+    },
+    "personalize": {
+        "themes": [
+            {
+                "name": "Dark",
+                "value": "dark"
+            },
+            {
+                "name": "Light",
+                "value": "light"
+            },
+            {
+                "name": "Auto",
+                "value": "auto"
+            }
+        ],
+        "colors": [
+            {
+                "name": "Green",
+                "value": "#10b981"
+            },
+            {
+                "name": "Blue",
+                "value": "#3b82f6"
+            },
+            {
+                "name": "Purple",
+                "value": "#8b5cf6"
+            }
+        ]
+    },
+    "addProductMeta": {
+        "categories": [
+            "Electronics",
+            "Fashion",
+            "Home",
+            "Toys"
+        ],
+        "vatRates": [
+            "0%",
+            "5%",
+            "10%",
+            "20%"
+        ],
+        "materials": [
+            "Plastic",
+            "Metal",
+            "Wood",
+            "Fabric",
+            "Glass"
+        ],
+        "lengths": [
+            10,
+            20,
+            30,
+            40,
+            50,
+            60,
+            70,
+            80,
+            90,
+            100
+        ],
+        "widths": [
+            10,
+            20,
+            30,
+            40,
+            50
+        ],
+        "weights": [
+            0.5,
+            1,
+            2,
+            5,
+            10,
+            20,
+            50
+        ]
+    },
+    "addCustomerMeta": {
+        "countries": [
+            "USA",
+            "UK",
+            "Spain",
+            "Austria",
+            "Germany",
+            "France"
+        ],
+        "statuses": [
+            "Active",
+            "Inactive",
+            "Pending"
+        ],
+        "titles": [
+            "Mr",
+            "Ms",
+            "Mrs",
+            "Dr"
+        ],
+        "visibility": [
+            "Public",
+            "Private",
+            "Friends"
+        ]
+    },
+    "footer": {
+        "copyright": "Copyright @2025",
+        "brand": "</>Ubaid",
+        "links": [
+            {
+                "name": "Update",
+                "url": "/update"
+            },
+            {
+                "name": "Components",
+                "url": "/components"
+            },
+            {
+                "name": "Privacy Policy",
+                "url": "/privacy"
+            },
+            {
+                "name": "Help",
+                "url": "/help"
+            },
+            {
+                "name": "Terms of Use",
+                "url": "/terms"
+            }
+        ]
+    },
+    "topBarMeta": {
+        "searchPlaceholder": "Type something here...",
+        "notifications": [
+            {
+                "id": 1,
+                "title": "6 new updates",
+                "time": "2:14 pm",
+                "unread": true
+            },
+            {
+                "id": 2,
+                "title": "Jack Mario commented",
+                "body": "This one is most usable design...",
+                "time": "2 days ago",
+                "unread": true
+            },
+            {
+                "id": 3,
+                "title": "Subscription expires soon",
+                "body": "Please upgrade to get service interrupt free.",
+                "time": "3 days ago",
+                "unread": false
+            }
+        ],
+        "userMenu": {
+            "balance": 6969,
+            "currency": "$",
+            "shortcuts": [
+                {
+                    "name": "My Profile",
+                    "icon": "FiUser"
+                },
+                {
+                    "name": "My Dashboard",
+                    "icon": "FiHome"
+                },
+                {
+                    "name": "Earning",
+                    "icon": "FiDollarSign"
+                },
+                {
+                    "name": "Subscription",
+                    "icon": "FiCreditCard"
+                },
+                {
+                    "name": "Account Setting",
+                    "url": "/settings",
+                    "icon": "FiSettings"
+                }
+            ],
+            "languages": [
+                "EN - English",
+                "ES - Español",
+                "DE - Deutsch"
+            ],
+            "logoutUrl": "/logout"
+        }
+    }
+}

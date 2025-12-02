@@ -22,6 +22,7 @@ export default function Login() {
             console.log("Login Response:", userCredential);
             console.log("User:", user);
 
+
             // -----------------------------------
             // 🍪 STORE USER DATA IN COOKIES
             // -----------------------------------
@@ -29,8 +30,8 @@ export default function Login() {
             Cookies.set("refreshToken", user.refreshToken, { expires: 7 });
             Cookies.set("accessToken", user.accessToken, { expires: 1 });
             // -----------------------------------
-
             navigate("/dashboard"); // redirect to dashboard
+
         } catch (err) {
             setError("Invalid credentials");
         }

@@ -10,13 +10,18 @@ import Settings from './pages/Settings';
 import Personalize from './pages/Personalize';
 import AddProduct from './pages/AddProduct';
 import AddCustomer from './pages/AddCustomer';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 export default function App() {
   return (
     <BrowserRouter>
       <SiteDataProvider>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+          <Route path="/dashboard" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="orders" element={<Orders />} />
             <Route path="products" element={<Products />} />

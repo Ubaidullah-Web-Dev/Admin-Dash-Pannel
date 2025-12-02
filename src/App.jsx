@@ -40,8 +40,6 @@ export default function App() {
                 </PublicRoute>
               }
             />
-
-            {/* Protected dashboard routes */}
             <Route
               path="/dashboard"
               element={

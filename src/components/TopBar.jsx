@@ -5,7 +5,6 @@ import * as Ico from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
 import { signOut } from "firebase/auth";
 import { auth } from "../Firebase";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
 export default function TopBar() {
@@ -13,12 +12,7 @@ export default function TopBar() {
     const handleLogout = async () => {
         try {
             await signOut(auth);
-            Cookies.remove("uid");
-            Cookies.remove("refreshToken");
-            Cookies.remove("accessToken");
-
             console.log("User logged out successfully");
-
             navigate("/");
         } catch (error) {
             console.error("logout error:", error);
@@ -78,7 +72,7 @@ export default function TopBar() {
                                                 onChange={(e) => setSearchQuery(e.target.value)}
                                                 placeholder={searchPlaceholder}
                                                 autoFocus
-                                                className="w-full bg-zinc-900 border border-zinc-600 rounded-lg px-4 py-2 pr-10 text-sm text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                                                className="w-full bg-zinc-900 border border-zinc-600 rounded-lg px-4 py-2 pr-10 text-sm text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500" />
                                             <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-green-400 transition">
                                                 <Ico.FiSearch className="text-lg" />
                                             </button>
@@ -140,7 +134,7 @@ export default function TopBar() {
                                     onChange={(e) => setSearchQuery(e.target.value)}
                                     placeholder={searchPlaceholder}
                                     autoFocus
-                                    className="w-full bg-zinc-900 border border-zinc-600 rounded-lg px-4 py-2 pr-10 text-sm text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500"/>
+                                    className="w-full bg-zinc-900 border border-zinc-600 rounded-lg px-4 py-2 pr-10 text-sm text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-green-500" />
                                 <button type="submit" className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-green-400 transition">
                                     <Ico.FiSearch className="text-lg" />
                                 </button>

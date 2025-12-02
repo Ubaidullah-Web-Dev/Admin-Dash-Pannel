@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { auth } from "../Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import Cookies from "js-cookie";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -21,16 +20,7 @@ export default function Login() {
 
             console.log("Login Response:", userCredential);
             console.log("User:", user);
-
-
-            // -----------------------------------
-            // 🍪 STORE USER DATA IN COOKIES
-            // -----------------------------------
-            Cookies.set("uid", user.uid, { expires: 7 });
-            Cookies.set("refreshToken", user.refreshToken, { expires: 7 });
-            Cookies.set("accessToken", user.accessToken, { expires: 1 });
-            // -----------------------------------
-            navigate("/dashboard"); // redirect to dashboard
+            navigate("/dashboard");
 
         } catch (err) {
             setError("Invalid credentials");

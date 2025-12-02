@@ -1,14 +1,11 @@
 import { Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
+import { useAuth } from "../context/AuthContext";
 
 export default function PublicRoute({ children }) {
-    const uid = Cookies.get("uid");
+    const { currentUser } = useAuth();
 
-    // If user is logged in, redirect to /dashboard
-    if (uid) {
+    if (currentUser) {
         return <Navigate to="/dashboard" replace />;
     }
-
-    // Otherwise, allow access
     return children;
 }

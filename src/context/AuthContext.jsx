@@ -1,36 +1,27 @@
-// src/context/AuthContext.jsx
 import { createContext, useContext, useEffect, useState } from "react";
 import { auth } from "../Firebase";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import Cookies from "js-cookie";
+import { onAuthStateChanged } from "firebase/auth";
 
 const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-    const [currentUser, setCurrentUser] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [currentUser, setCurrentUser] = useState(undefined);
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
-            const uidCookie = Cookies.get("uid");
-
-            if (!uidCookie && user) {
-                // If cookies are gone but Firebase session exists → sign out
-                signOut(auth);
-                setCurrentUser(null);
-            } else {
-                setCurrentUser(user);
-            }
-            setLoading(false);
+            setCurrentUser(user);
         });
 
         return () => unsubscribe();
     }, []);
+    if (currentUser === undefined) {
+        return null;
+    }
 
     return (
         <AuthContext.Provider value={{ currentUser }}>
-            {!loading && children}
+            {children}
         </AuthContext.Provider>
     );
 };

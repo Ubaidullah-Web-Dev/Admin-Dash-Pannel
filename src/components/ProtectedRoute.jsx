@@ -1,11 +1,10 @@
-// src/components/ProtectedRoute.jsx
 import { Navigate } from "react-router-dom";
-import Cookies from "js-cookie";
+import { useAuth } from "../context/AuthContext";
 
 export default function ProtectedRoute({ children }) {
-    const uid = Cookies.get("uid");
+    const { currentUser } = useAuth();
 
-    if (!uid) {
+    if (!currentUser) {
         return <Navigate to="/login" replace />;
     }
 

@@ -19,7 +19,7 @@ export default function Signup() {
 
             console.log("Signup Response:", userCredential);
             console.log("User:", userCredential.user);
-            navigate("/"); // Go to dashboard after signup
+            navigate("/");
         } catch (err) {
             setError(err.message);
         }

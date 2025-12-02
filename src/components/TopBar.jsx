@@ -3,8 +3,28 @@ import { useLocation, Link } from 'react-router-dom';
 import { useSiteData } from '../context/SiteDataContext';
 import * as Ico from 'react-icons/fi';
 import { motion, AnimatePresence } from 'framer-motion';
+import { signOut } from "firebase/auth";
+import { auth } from "../Firebase";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 export default function TopBar() {
+    const navigate = useNavigate();
+    const handleLogout = async () => {
+        try {
+            await signOut(auth);
+            Cookies.remove("uid");
+            Cookies.remove("refreshToken");
+            Cookies.remove("accessToken");
+
+            console.log("User logged out successfully");
+
+            navigate("/");
+        } catch (error) {
+            console.error("logout error:", error);
+        }
+    };
+
     const { topBarMeta } = useSiteData();
     if (!topBarMeta) return null;
     const { searchPlaceholder, notifications, userMenu } = topBarMeta;
@@ -198,7 +218,7 @@ export default function TopBar() {
                                 <button key={l} onClick={() => setUserOpen(false)} className="w-full text-left px-3 py-1 rounded hover:bg-zinc-700 text-sm">
                                     {l}
                                 </button>))}
-                            <button onClick={() => { setUserOpen(false); }} className="w-full flex items-center gap-3 px-3 py-2 rounded hover:bg-zinc-700 text-sm text-red-400 mt-2">
+                            <button onClick={() => { setUserOpen(false); handleLogout(); }} className="w-full flex items-center gap-3 px-3 py-2 rounded hover:bg-zinc-700 text-sm text-red-400 mt-2">
                                 <Ico.FiLogOut />
                                 <span>Logout</span>
                             </button>

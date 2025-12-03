@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { auth } from "../Firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import {
+    Box,
+    Paper,
+    TextField,
+    Button,
+    Typography
+} from "@mui/material";
 
 export default function Signup() {
     const navigate = useNavigate();
@@ -26,69 +33,57 @@ export default function Signup() {
     };
 
     return (
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "100px" }}>
-            <form
-                onSubmit={handleSignup}
-                style={{
-                    width: "350px",
-                    padding: "20px",
-                    border: "1px solid #ddd",
-                    borderRadius: "10px"
-                }}
-            >
-                <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Signup</h2>
-
+        <Box
+            sx={{
+                display: "flex",
+                justifyContent: "center",
+                mt: 20
+            }}>
+            <Paper
+                elevation={5}
+                sx={{
+                    width: 350,
+                    p: 3,
+                    borderRadius: 3
+                }}>
+                <Typography
+                    variant="h5"
+                    sx={{ textAlign: "center", mb: 2 }}>
+                    Signup
+                </Typography>
                 {error && (
-                    <p style={{ color: "red", marginBottom: "10px", textAlign: "center" }}>
+                    <Typography
+                        color="error"
+                        sx={{ textAlign: "center", mb: 2 }}>
                         {error}
-                    </p>
+                    </Typography>
                 )}
-
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        marginBottom: "15px",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc"
-                    }}
-                />
-
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        marginBottom: "15px",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc"
-                    }}
-                />
-
-                <button
-                    type="submit"
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        background: "#111827",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "5px",
-                        cursor: "pointer"
-                    }}
-                >
-                    Create Account
-                </button>
-            </form>
-        </div>
+                <form onSubmit={handleSignup}>
+                    <TextField
+                        type="email"
+                        label="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        fullWidth
+                        margin="normal"/>
+                    <TextField
+                        type="password"
+                        label="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        fullWidth
+                        margin="normal"/>
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        fullWidth
+                        sx={{ mt: 2, py: 1.2 }}>
+                        Create Account
+                    </Button>
+                </form>
+            </Paper>
+        </Box>
     );
 }

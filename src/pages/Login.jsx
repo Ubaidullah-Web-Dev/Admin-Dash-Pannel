@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { auth } from "../Firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import {
+    Box,
+    Paper,
+    TextField,
+    Button,
+    Typography
+} from "@mui/material";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -28,79 +35,67 @@ export default function Login() {
     };
 
     return (
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "100px" }}>
-            <form
-                onSubmit={handleLogin}
-                style={{
-                    width: "350px",
-                    padding: "20px",
-                    border: "1px solid #ddd",
-                    borderRadius: "10px"
-                }}
-            >
-                <h2 style={{ textAlign: "center", marginBottom: "20px" }}>Login</h2>
-
-                {error && (
-                    <p style={{ color: "red", marginBottom: "10px", textAlign: "center" }}>
-                        {error}
-                    </p>
-                )}
-
-                <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        marginBottom: "15px",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc"
-                    }}
-                />
-
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        marginBottom: "15px",
-                        borderRadius: "5px",
-                        border: "1px solid #ccc"
-                    }}
-                />
-
-                <button
-                    type="submit"
-                    style={{
-                        width: "100%",
-                        padding: "10px",
-                        background: "#111827",
-                        color: "white",
-                        border: "none",
-                        borderRadius: "5px",
-                        cursor: "pointer"
-                    }}
-                >
+        <Box
+            sx={{
+                display: "flex",
+                justifyContent: "center",
+                mt: 20
+            }}>
+            <Paper
+                elevation={5}
+                sx={{
+                    width: 350,
+                    p: 3,
+                    borderRadius: 3
+                }}>
+                <Typography
+                    variant="h5"
+                    sx={{ textAlign: "center", mb: 2 }}>
                     Login
-                </button>
-
-                <p style={{ textAlign: "center", marginTop: "15px" }}>
+                </Typography>
+                {error && (
+                    <Typography
+                        color="error"
+                        sx={{ textAlign: "center", mb: 2 }}>
+                        {error}
+                    </Typography>
+                )}
+                <form onSubmit={handleLogin}>
+                    <TextField
+                        type="email"
+                        label="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        fullWidth
+                        margin="normal"/>
+                    <TextField
+                        type="password"
+                        label="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        fullWidth
+                        margin="normal"/>
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        fullWidth
+                        sx={{ mt: 2, py: 1.2 }}>
+                        Login
+                    </Button>
+                </form>
+                <Typography sx={{ textAlign: "center", mt: 2 }}>
                     Don't have an account?{" "}
-                    <span
-                        onClick={() => navigate("/signup")}
-                        style={{ color: "#2563eb", cursor: "pointer" }}
-                    >
+                    <Typography
+                        component="span"
+                        color="primary"
+                        sx={{ cursor: "pointer" }}
+                        onClick={() => navigate("/signup")}>
                         Create one
-                    </span>
-                </p>
-            </form>
-        </div>
+                    </Typography>
+                </Typography>
+            </Paper>
+        </Box>
     );
 }

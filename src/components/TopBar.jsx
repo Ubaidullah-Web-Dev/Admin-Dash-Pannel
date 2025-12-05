@@ -216,6 +216,7 @@ export default function TopBar() {
                                 <Ico.FiLogOut />
                                 <span>Logout</span>
                             </button>
+                            
                         </div>
                     </motion.aside>
                 )}

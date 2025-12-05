@@ -12,34 +12,34 @@
             },
             {
                 "name": "Orders",
-                "url": "/orders",
+                "url": "/dashboard/orders",
                 "icon": "FiShoppingBag"
             },
             {
                 "name": "Products",
-                "url": "/products",
+                "url": "/dashboard/products",
                 "icon": "FiPackage"
             },
             {
                 "name": "Customers",
-                "url": "/customers",
+                "url": "/dashboard/customers",
                 "icon": "FiUsers"
             },
             {
                 "name": "Finance",
-                "url": "/finance",
+                "url": "/dashboard/finance",
                 "icon": "FiDollarSign"
             },
             {
                 "name": "Settings",
-                "url": "/settings",
+                "url": "/dashboard/settings",
                 "icon": "FiSettings"
             }
         ],
         "other": [
             {
                 "name": "Personalize",
-                "url": "/personalize",
+                "url": "/dashboard/personalize",
                 "icon": "FiEdit"
             }
         ]
